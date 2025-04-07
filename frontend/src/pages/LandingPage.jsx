@@ -7,7 +7,7 @@ function LandingPage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold">ChatApp</span>
+            <span className="text-xl font-bold">NL2SQL App</span>
           </div>
           <div className="flex items-center gap-4">
             <Link to="/sign-in">
@@ -24,15 +24,14 @@ function LandingPage() {
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-20">
             <div className="flex flex-col justify-center space-y-6">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                Chat with AI, simplified
+                Get SQL queries for all your needs, simplified
               </h1>
               <p className="text-muted-foreground md:text-xl">
                 Experience seamless conversations with our advanced AI chat
-                platform. Sign up now and start chatting with our intelligent
-                assistant.
+                platform. Provide queries in natural language and get SQL queries
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Link to="/sign-up">
+                <Link to="/chat">
                   <Button size="lg" className="w-full sm:w-auto">
                     Get Started
                   </Button>
@@ -56,7 +55,7 @@ function LandingPage() {
                     <div className="flex items-center justify-between border-b pb-4">
                       <div className="flex items-center gap-2">
                         <div className="h-8 w-8 rounded-full bg-primary" />
-                        <span className="font-medium">AI Assistant</span>
+                        <span className="font-medium">NL2SQL App</span>
                       </div>
                     </div>
                     <div className="flex-1 overflow-auto py-4 space-y-4">
@@ -68,7 +67,7 @@ function LandingPage() {
                       </div>
                       <div className="flex items-start gap-3 justify-end">
                         <div className="bg-primary p-3 rounded-lg text-primary-foreground max-w-[80%]">
-                          <p>I have a question about your service.</p>
+                          <p>I want to know the number of employees in the company</p>
                         </div>
                         <div className="h-8 w-8 rounded-full bg-secondary flex-shrink-0" />
                       </div>
@@ -111,7 +110,7 @@ function LandingPage() {
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-center text-sm text-muted-foreground md:text-left">
-            &copy; {new Date().getFullYear()} ChatApp. All rights reserved.
+            &copy; {new Date().getFullYear()} NL2SQL App. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link

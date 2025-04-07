@@ -68,7 +68,7 @@ function ChatPage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold">ChatApp</span>
+            <span className="text-xl font-bold">NL2SQL App</span>
           </div>
           <Button variant="ghost" size="icon" onClick={handleLogout}>
             <LogOut className="h-5 w-5" />
@@ -92,7 +92,7 @@ function ChatPage() {
           {/* Chat area */}
           <div className="flex flex-col h-full">
             <div className="flex-1 overflow-auto p-4">
-              <div className="space-y-4 max-w-3xl mx-auto">
+              <div className="space-y-4 max-w-10xl mx-auto">
                 {messages.map((message) => (
                   <div
                     key={message.id}
@@ -154,10 +154,10 @@ function ChatPage() {
             <div className="border-t p-4">
               <form
                 onSubmit={handleSendMessage}
-                className="flex items-end gap-2 max-w-3xl mx-auto"
+                className="flex gap-2 max-w-7xl mx-auto"
               >
                 <Textarea
-                  className="min-h-[60px] flex-1 resize-none"
+                  className="min-h-[10px] flex-1 resize-none"
                   placeholder="Type your message..."
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
