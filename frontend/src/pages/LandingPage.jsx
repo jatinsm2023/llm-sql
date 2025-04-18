@@ -10,12 +10,7 @@ function LandingPage() {
             <span className="text-xl font-bold">NL2SQL App</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link to="/sign-in">
-              <Button variant="outline">Sign In</Button>
-            </Link>
-            <Link to="/sign-up">
-              <Button>Sign Up</Button>
-            </Link>
+            
           </div>
         </div>
       </header>
@@ -36,15 +31,7 @@ function LandingPage() {
                     Get Started
                   </Button>
                 </Link>
-                <Link to="/about">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="w-full sm:w-auto"
-                  >
-                    Learn More
-                  </Button>
-                </Link>
+                
               </div>
             </div>
             <div className="flex items-center justify-center">
