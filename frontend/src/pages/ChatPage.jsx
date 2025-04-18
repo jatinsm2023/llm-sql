@@ -39,20 +39,40 @@ function ChatPage() {
     setIsLoading(true);
 
     // Simulate AI response - replace with actual backend call
-    setTimeout(() => {
+    try {
+      const res = await fetch(
+        "https://5a7a-34-87-2-220.ngrok-free.app/generate_sql",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query: input }),
+        }
+      );
+
+      const data = await res.json();
+      console.log(data);
       const aiMessage = {
         id: (Date.now() + 1).toString(),
-        content:
-          "This is a simulated response. You'll need to connect this to your AI backend.",
+        content: data?.sql_query || "No response from backend 😢",
         sender: "ai",
         timestamp: new Date(),
       };
 
       setMessages((prev) => [...prev, aiMessage]);
+    } catch (error) {
+      const errorMessage = {
+        id: (Date.now() + 1).toString(),
+        content: "⚠️ Error fetching response from server.",
+        sender: "ai",
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
-
   const handleLogout = () => {
     // Implement logout logic here
     navigate("/");
